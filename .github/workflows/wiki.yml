@@ -35,12 +35,12 @@ jobs:
 
       - name: Generate sidebar
         run: |
-            echo "[Home](wiki/README.md)" > _wiki/Sidebar.md
+            echo "[Home](wiki/README.md)" > wiki/_Sidebar.md
             for dir in wiki/*/; do
-              echo "* [$(basename $dir)](${dir}README.md)" >> _wiki/Sidebar.md
+              echo "* [$(basename $dir)](${dir}README.md)" >> wiki/_Sidebar.md
               for filename in $dir*; do
                 if [ $(basename $filename) != "README.md" ]; then
-                  echo "  * [$(basename $filename .md)](${filename})" >> _wiki/Sidebar.md;
+                  echo "  * [$(basename $filename .md)](${filename})" >> wiki/_Sidebar.md;
                 fi
               done
             done
