@@ -1,5 +1,5 @@
 # Xodus Docs
-Knowledge dump and design documentation. Xodus doc
+Knowledge dump and design documentation.
 
 ## Table of contents
 - [Xodus Documentation](./xodus/README.md)
