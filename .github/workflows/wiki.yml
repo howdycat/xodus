@@ -37,10 +37,12 @@ jobs:
         run: |
             echo "[Home](Home)" > wiki/_Sidebar.md
             for dir in wiki/*/; do
-              echo "* [$(basename $dir)](${dir})" >> wiki/_Sidebar.md
+              DIRNAME=$(basename $dir)
+              echo "* [${DIRNAME}](${DIRNAME})" >> wiki/_Sidebar.md
               for filename in $dir*; do
-                if [ $(basename $filename) != $dir ]; then
-                  echo "  * [$(basename $filename .md)]($(basename $filename .md))" >> wiki/_Sidebar.md;
+                NAME=$(basename $filename .md)
+                if [ "${DIRNAME,,}" != "${NAME,,}" ]; then
+                  echo "  * [${NAME}](${NAME})" >> wiki/_Sidebar.md;
                 fi
               done
             done
