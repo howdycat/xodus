@@ -40,7 +40,7 @@ jobs:
               echo "* [$(basename $dir)](${dir})" >> wiki/_Sidebar.md
               for filename in $dir*; do
                 if [ $(basename $filename) != $dir ]; then
-                  echo "  * [$(basename $filename .md)](${basename filename .md})" >> wiki/_Sidebar.md;
+                  echo "  * [$(basename $filename .md)]($(basename $filename .md))" >> wiki/_Sidebar.md;
                 fi
               done
             done
