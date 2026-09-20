@@ -1,6 +1,6 @@
 # Xodus Architecture
 
-
+edit 
 ## Components
 
 ![Xodus architecture diagram](/assets/Docs/architecture_diagram.png)
