@@ -8,40 +8,19 @@ Xodus services provide methods and behavior to external applications. These serv
 - Services can be called from either the xgameruntime or another external frontend. Many of the service methods called by xgameruntime should map to the associated xgameruntime method.
 - Services should use protobuf definitions as their inputs and output parameters. 
 
-# User Service
+## User Service
 
 Provide user-management methods for authenticating and logging out users. Ideally, multi-user support should exist. This service would cover authentication and could potentially cover behavior needed by XUser.
 
-
-
-## Login
-
-- **Behavior**: Existing logic in `xodus-cli/src/commands/login.rs`. 
-  - Look for a token to authenticate with in the token manager
-  - Prompt for webview login if the token is invalid
-- **Request**: 
-- **Response**: 
-
-## Logout
-
-- **Behavior**: Existing logic in `xodus-cli/src/commands/logout.rs`. 
-  - Remove the device token
-  - Remove all user tokens
-- **Request**: 
-- **Response**: 
-
-## List
-
-- **Behavior**:
-  - display all authenticated users
-- **Request**: 
-- **Response**: 
+- [ ] Login - Existing logic in `xodus-cli/src/commands/login.rs`. 
+- [ ] Logout - Existing logic in `xodus-cli/src/commands/logout.rs`. 
 
 ## Token Service
 
 Token service is used to access the token store provided by Xodus.
 
-## Catalog Service
+- [ ] Store/Refresh - allow refresh of expired sts device tokens per [#189](/user/project/issues/189) 
+- [ ] Revoke - allow revoking of a device token, will require [#109](/user/project/issues/109)
 
 ## Package service
 
