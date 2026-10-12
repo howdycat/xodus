@@ -12,6 +12,8 @@ Xodus services provide methods and behavior to external applications. These serv
 
 Provide user-management methods for authenticating and logging out users. Ideally, multi-user support should exist. This service would cover authentication and could potentially cover behavior needed by XUser.
 
+
+
 ## Login
 
 - **Behavior**: Existing logic in `xodus-cli/src/commands/login.rs`. 
